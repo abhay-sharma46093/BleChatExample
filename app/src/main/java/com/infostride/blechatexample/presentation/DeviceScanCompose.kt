@@ -1,5 +1,6 @@
 package com.infostride.blechatexample.presentation
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
 import android.util.Log
 import androidx.compose.foundation.background
@@ -22,7 +23,7 @@ import com.infostride.blechatexample.bluetooth.ChatServer
 import com.infostride.blechatexample.states.DeviceScanViewState
 
 private const val TAG = "DeviceScanCompose"
-
+@SuppressLint("MissingPermission")
 object DeviceScanCompose {
 
 

@@ -1,5 +1,6 @@
 package com.infostride.blechatexample.viewmodels
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.bluetooth.*
 import android.bluetooth.le.*
@@ -16,7 +17,7 @@ import com.infostride.blechatexample.states.DeviceScanViewState
 private const val TAG = "DeviceScanViewModel"
 
 private const val SCAN_PERIOD = 20000L
-
+@SuppressLint("MissingPermission")
 class DeviceScanViewModel(app: Application) : AndroidViewModel(app) {
 
 

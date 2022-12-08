@@ -1,6 +1,7 @@
 package com.infostride.blechatexample
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
 import android.os.Bundle
@@ -32,7 +33,7 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 
 private const val TAG = "MainActivityTAG"
-
+@SuppressLint("MissingPermission")
 class MainActivity : ComponentActivity() {
 
     private val viewModel: DeviceScanViewModel by viewModels()

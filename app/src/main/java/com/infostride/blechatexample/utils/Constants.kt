@@ -1,6 +1,7 @@
 package com.infostride.blechatexample.utils
 
-import java.util.*
+import java.util.UUID
+
 
 val SERVICE_UUID: UUID = UUID.fromString("0000b81d-0000-1000-8000-00805f9b34fb")
 

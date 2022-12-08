@@ -1,5 +1,6 @@
 package com.infostride.blechatexample.bluetooth
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.bluetooth.*
 import android.bluetooth.le.AdvertiseCallback
@@ -17,7 +18,7 @@ import com.infostride.blechatexample.utils.MESSAGE_UUID
 import com.infostride.blechatexample.utils.SERVICE_UUID
 
 private const val TAG = "ChatServerTAG"
-
+@SuppressLint("MissingPermission")
 object ChatServer {
 
 
@@ -66,6 +67,7 @@ object ChatServer {
         _deviceConnection.postValue(DeviceConnectionState.Connected(device))
         connectToChatDevice(device)
     }
+
 
     private fun connectToChatDevice(device: BluetoothDevice) {
         gattClientCallback = GattClientCallback()
