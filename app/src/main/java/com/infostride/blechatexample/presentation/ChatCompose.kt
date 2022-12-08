@@ -1,5 +1,6 @@
 package com.infostride.blechatexample.presentation
 
+import android.hardware.lights.Light
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -27,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.infostride.blechatexample.bluetooth.ChatServer
 import com.infostride.blechatexample.models.Message
+import com.infostride.blechatexample.ui.theme.LightGreen
+import com.infostride.blechatexample.ui.theme.White
 
 private const val TAG = "ChatCompose"
 
@@ -45,11 +48,10 @@ object ChatCompose {
                 modifier = Modifier
                     .width(150.dp)
                     .padding(5.dp)
-                    .border(1.dp, Color.Black, shape = RoundedCornerShape(10.dp))
+                    .border(1.dp, Color.Gray, shape = RoundedCornerShape(10.dp))
                     .background(
-                        if (message is Message.RemoteMessage) Color(0xFFD3D3D3) else Color(
-                            0xFF90EE90
-                        ),
+                        if (message is Message.RemoteMessage) White else
+                            LightGreen,
                         shape = RoundedCornerShape(10.dp)
                     )
             ) {
