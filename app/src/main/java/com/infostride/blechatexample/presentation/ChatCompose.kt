@@ -1,6 +1,5 @@
 package com.infostride.blechatexample.presentation
 
-import android.hardware.lights.Light
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -34,8 +33,6 @@ import com.infostride.blechatexample.ui.theme.White
 private const val TAG = "ChatCompose"
 
 object ChatCompose {
-
-
     @Composable
     fun ShowChat(message: Message) {
         Row(
@@ -64,7 +61,7 @@ object ChatCompose {
     fun Chats(deviceName: String?) {
         val message by ChatServer.messages.observeAsState()
 
-        val inputvalue = remember { mutableStateOf(TextFieldValue()) }
+        val inputValue = remember { mutableStateOf(TextFieldValue()) }
 
         val messageList = remember {
             mutableStateListOf<Message>()
@@ -94,7 +91,7 @@ object ChatCompose {
                 }
 
 
-                InputField(inputvalue)
+                InputField(inputValue)
             }
         } else {
             Column(
@@ -108,7 +105,7 @@ object ChatCompose {
                     Text(text = "No Chat History")
                 }
 
-                InputField(inputvalue = inputvalue)
+                InputField(inputvalue = inputValue)
             }
         }
     }
